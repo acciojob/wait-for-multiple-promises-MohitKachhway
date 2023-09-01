@@ -23,7 +23,7 @@ let prom3 = new Promise((resolve,reject)=>{
 let prom = Promise.all([prom1,prom2,prom3]);
 prom.then((arr)=>{
 	let tbody = document.getElementById("output");
-	let row= tbody.children[0];
+	let row= document.getElementById("loading");
 	row.children[0].innerText="Promise 1";
 	row.children[1].innerText=arr[0];
 	let sum=arr[0];
