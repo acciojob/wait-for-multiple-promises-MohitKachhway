@@ -23,11 +23,9 @@ let prom3 = new Promise((resolve,reject)=>{
 let prom = Promise.all([prom1,prom2,prom3]);
 prom.then((arr)=>{
 	let tbody = document.getElementById("output");
-	let row= document.getElementById("loading");
-	row.children[0].innerText="Promise 1";
-	row.children[1].innerText=arr[0];
-	let sum=arr[0];
-	for (let i = 1; i <=arr.length; i++) {
+	let sum=0;
+	tbody.children[0].remove();
+	for (let i = 0; i <=arr.length; i++) {
 		
 		let newRow = document.createElement("tr");
 		let col1= document.createElement("td");
