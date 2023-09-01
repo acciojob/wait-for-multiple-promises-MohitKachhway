@@ -32,7 +32,7 @@ prom.then((arr)=>{
 		let col2= document.createElement("td");
 		if(i>=3){
 			col1.innerText=`Total`
-		    col2.innerText=sum;
+		    col2.innerText=sum.toFixed(3);
 			newRow.appendChild(col1);
 		    newRow.appendChild(col2);
 		    tbody.appendChild(newRow);
