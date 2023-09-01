@@ -30,17 +30,18 @@ prom.then((arr)=>{
 		let newRow = document.createElement("tr");
 		let col1= document.createElement("td");
 		let col2= document.createElement("td");
-		if(i>=3){
+		
+		if(i==3){
 			col1.innerText=`Total`
-		    col2.innerText=sum.toFixed(3);
-			newRow.appendChild(col1);
-		    newRow.appendChild(col2);
-		    tbody.appendChild(newRow);
-			return ;
+		    col2.innerText=(sum/1000).toFixed(3);
 		}
-		sum+=arr[i];
-		col1.innerText=`Promise${i+1}`
-		col2.innerText=arr[i];
+		else{
+			sum+=arr[i];
+			col1.innerText=`Promise${i+1}`
+		    col2.innerText=(arr[i]/1000).toFixed(3);
+		}
+		
+		
 		newRow.appendChild(col1);
 		newRow.appendChild(col2);
 		tbody.appendChild(newRow);
